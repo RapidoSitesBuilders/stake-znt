@@ -19,14 +19,7 @@ var walletAddress = null,
     $(document).ready(function() {
         $('.connectBtn').on('click', function(){
             if (walletAddress === null) {
-                if (confirm("Would you like to disconnect from this dApp?")) {
-                    if (isMetaMask) {
-                        metaMaskConnect.disconnect();
-                    }
-                    else {
-                        walletConnect.disconnect();
-                    }
-                }
+                $("#walletConnectModal").css("display", "block");
             }
             else {
                 if (confirm("Would you like to disconnect from this dApp?")) {
@@ -41,9 +34,8 @@ var walletAddress = null,
         });
         
         $("#modalWConnect").on("click", function() {
-            metaMaskConnect.initialise().then(function() {
-                metaMaskConnect.connect();
-            });
+            walletConnect.initialise();
+            walletConnect.connect();
             $("#walletConnectModal").css("display", "none");
         });
         
@@ -54,7 +46,7 @@ var walletAddress = null,
             $("#walletConnectModal").css("display", "none");
         });
         
-        // $("#walletConnectModal").css("display", "block");
+        $("#walletConnectModal").css("display", "block");
     });
     
     function initialiseContracts() {
