@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Zi - Staking DAPP</title>
+    <meta content="Zi Network - Staking DAPP" property="og:title" />
+    <meta content="Zi Network - Staking DAPP" property="twitter:title" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link
+      href="assets/css/project-temps.a399bff5e.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="assets/css/customs.css" rel="stylesheet" type="text/css" />
+    <link
+      href="assets/css/bigtech/bigtech-core6a4d.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bigtech/bigtech-custom6a4d.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/css/bigtech/bigtech-unit6a4d.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="assets/js/webfont.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="assets/css/css.css" media="all" />
+    <link
+      href="assets/images/favicon.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link href="assets/images/logopng.html" rel="apple-touch-icon" />
+    <script src="assets/js/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="particles-js" style=""></div>
+    <nav>
+      <ul>
+        <li>
+          <button id="toggle-btn">
+            <i
+              class="fa-solid fa-bars"
+              style="color: #00c5e6; font-size: 20px"
+            ></i>
+          </button>
+        </li>
+        <li>
+          <button id="toggle-btn">
+            <img
+              src="assets/images/logo-vtrans.png"
+              height="30"
+              style="height: 30px"
+            />
+          </button>
+        </li>
+        <li></li>
+        <li class="floating-right">
+          <a class="" style="line-height: 40px; color: white"
+            >$ZNT Tokens: <span class="balance">---</span></a
+          >
+          <span>
+            <span class="dot flex absolute h-3 w-3 top-0 right-0 -mt-1 -mr-1">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-3 w-3 bg-primary"
+              ></span>
+            </span>
+            <a class="connectBtn">
+              <span id="connectBtn" class="connect-btn">Connect Wallet</span>
+            </a>
+          </span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="wrapper">
+      <div class="drawer">
+        <a class="active" href="#"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="farm.html"><i class="fa-solid fa-seedling"></i> Farm</a>
+        <a href="swap.html"
+          ><i class="fa-solid fa-arrow-right-arrow-left"></i> Swap</a
+        >
+      </div>
+      <div class="header"></div>
+      <h1 class="white title"><span></span></h1>
+
+      <section>
+        <div id="wizard">
+          <section>
+            <div style="width: 100%; content: center" class="white title">
+              <img src="assets/images/logo-znt.png" height="100" width="100" />
+            </div>
+
+            <h3 class="white" style="text-align: center">
+              Total Staked: <span class="white totalStaked">---</span>
+            </h3>
+
+            <div class="container">
+              <p class="white mb-5">APY: <b class="apyEst green">---</b></p>
+
+              <p class="mb-5" style="line-height: 25px; color: #00daffab">
+                <i>
+                  Crypto staking redefined with true flexibility on our platform.<br/> Stake and unstake whenever you wish - no lock-in periods, no penalty fees.<br/> But don't forget to claim your rewards before unstaking.<br/> For seamless transactions, please don't exceed the maximum wallet limit during staking.<br/> Embrace flexibility and control, tailored just for you!
+                </i>
+              </p>
+
+              <br />
+              <!-- <hr /> -->
+
+              <div class="fields_array">
+                <h4 class="white">
+                  Total Pending Rewards: <b id="rewardsLb" class="green">---</b>
+                </h4>
+                <!-- <hr /> -->
+                <h4 class="white">
+                  Your Staked $ZNT Tokens:
+                  <b id="stakedLb" class="green">---</b>
+                </h4>
+                <!-- <hr /> -->
+                <!-- <h4 class="white">
+                  Next Unlock Date: <b id="unlockLb" class="green">---</b>
+                </h4> -->
+              </div>
+
+              <br />
+
+              <div class="row">
+                <div class="col1">
+                  <input
+                    type="number"
+                    placeholder="Enter Token Amount"
+                    id="tokenAmtTb"
+                    name="tokenAmtTb"
+                    class="form-control"
+                    required
+                    placeholder=""
+                  />
+                </div>
+                <!-- <div class="space"></div> -->
+                <div class="col2">
+                  <button class="stakeBtn" id="stakeBtn">Approve</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+      <div class="button-container">
+        <div class="btnRow">
+          <div class="btnCol">
+            <button class="withdrawTokensBtn">Withdraw Tokens</button>
+          </div>
+          <div class="btnSep"></div>
+          <div class="btnCol">
+            <button class="harvestRewardsBtn">Claim Rewards</button>
+          </div>
+        </div>
+      </div>
+        </div>
+      <br />
+      <br />
+
+      <footer>
+        <div
+          class="footer-area footer-bg-color"
+          data-bg-color="#030b15"
+          id="contact-us"
+          data-background=""
+          style="
+            background-image: url('');
+            background-color: rgb(3, 11, 21);
+            position: relative;
+          "
+        >
+          <div class="container" style="bottom: 0; width: 100%; left: 50%">
+            <div class="footer-bottom">
+              <div class="row align-items-center" style="height: 100%">
+                <div class="col-lg-6">
+                  <div
+                    class="copyright-text"
+                    style="display: flex; align-items: center; flex-wrap: wrap"
+                  >
+                    <img
+                      src="assets/images/logo-vid.png"
+                      alt="Logo"
+                      style="height: 35px"
+                    />
+                    <div class="footer-content">
+                      <ul class="footer-social">
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-medium"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/zinetwork_org">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://t.me/zi_network">
+                            <i class="fab fa-telegram"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="mailto:contact@zi-network.org">
+                            <i class="fas fa-envelope"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="copyright-text">
+                    <p style="text-align-last: right">
+                      Copyright © 2023 Zi-Network All Rights Reserved.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="walletConnectModal" class="modal">
+      <div class="modal-content">
+        <h2>Choose Your Wallet</h2>
+        <p class="green" style="text-align: center">
+          Please Note: If you are using the MetaMask Mobile App, please select
+          the 'MetaMask' option and use within the 'MetaMask Browser'.
+        </p>
+        <br />
+        <div class="row2">
+          <div class="col2" id="modalMMConnect">
+            <img class="mm" src="assets/images/metamask.png" />
+            <h4>MetaMask</h4>
+          </div>
+          <div class="sep2"></div>
+          <div class="col2" id="modalWConnect">
+            <img src="assets/images/walletConnect.png" />
+            <h4>Wallet Connect</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/web3%401.5.2/dist/web3.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/web3modal%401.9.4/dist/index.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/evm-chains%400.2.0/dist/umd/index.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/%40walletconnect/web3-provider%401.6.2/dist/umd/index.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="assets/unpkg.com/fortmatic%402.2.1/dist/fortmatic.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/stake62ea.js"></script>
+    <script type="text/javascript" src="assets/js/customs.js"></script>
+  </body>
+</html>
